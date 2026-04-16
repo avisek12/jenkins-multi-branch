@@ -6,13 +6,6 @@ pipeline {
         SONAR_LOGIN = credentials('sonar')
     }
         stages {
-        stage('Git checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/avisek12/Jenkins-pipeline.git',
-                    credentialsId: 'git-creds'
-            }
-        }
         
         stage('Verify Code') {
             steps {
