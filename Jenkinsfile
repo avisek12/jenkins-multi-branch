@@ -44,15 +44,6 @@ pipeline {
             }
         }
         
-        stage('Docker Deploy') {
-            steps {
-                sh '''
-                echo $DOCKER_LOGIN_PSW | docker login -u $DOCKER_LOGIN_USR --password-stdin
-                '''
-                sh 'docker compose down'
-                sh 'docker compose up -d'
-            }
-        }
 
         stage('CLEAN UP') {
             steps {
