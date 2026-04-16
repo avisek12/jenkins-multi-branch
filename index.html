@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #00c6ff;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(0, 198, 255, 0.4);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>✨ Welcome from Devops</h1>
+    <p>Your web server is up and running smoothly.</p>
+
+    <button class="btn" onclick="showTime()">Check Server Time</button>
+
+    <div class="footer" id="time"></div>
+  </div>
+
+  <script>
+    function showTime() {
+      document.getElementById("time").innerText =
+        "Current Time: " + new Date().toLocaleString();
+    }
+  </script>
+</body>
+</html>
+

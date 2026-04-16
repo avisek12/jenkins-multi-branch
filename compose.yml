@@ -1,0 +1,24 @@
+#Compose file to check Jenkins with cloud flare ko
+version: "3.9"
+
+services:
+  centos1:
+    image: jenkins-custom-image:v1
+    container_name: centos-compose-cont1
+    ports:
+      - "8082:80"
+    networks:
+      - my_network
+
+  centos2:
+    image: jenkins-custom-image:v1
+    container_name: centos-compose-cont2
+    ports:
+      - "8083:80"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    name: compose-net
+    driver: bridge
