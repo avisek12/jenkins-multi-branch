@@ -1,4 +1,5 @@
 #print("Hello Sonar")
+
 import os
 
 # BAD PRACTICE: hardcoded password (Sonar will flag this)
